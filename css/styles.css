@@ -77,17 +77,13 @@ body {
   padding: 0 15px;
 }
 
-.section {
-  padding: 94px 0;
-}
-
 .title {
   margin-bottom: 50px;
   text-align: center;
 }
 
 /* index html page */
-/* header site nav */
+/* header site-nav */
 .logo {
   color: var(--accent-color);
 
@@ -99,15 +95,11 @@ body {
   padding: 24px 0 24px 0;
 }
 
-.logo-black {
+.logo__text {
   color: var(--logo-black-color);
 }
 
-.logo-white {
-  color: var(--primary-white-color);
-}
-
-.nav-link {
+.site-nav__link {
   color: var(--title-text-color);
 
   position: relative;
@@ -121,18 +113,18 @@ body {
   transition: color 250ms var(--timing-function);
 }
 
-.nav-link:hover,
-.nav-link:focus {
+.site-nav__link:hover,
+.site-nav__link:focus {
   color: var(--accent-color);
 }
 
 /* leaves an active link */
-.link.current {
+.site-nav__link--current {
   color: var(--accent-color);
 }
 
 /* underscore active link */
-.current::after {
+.site-nav__link--current::after {
   content: "";
 
   position: absolute;
@@ -147,25 +139,25 @@ body {
 }
 
 /* header position */
-.page-header {
+.header {
   max-height: 80px;
   border-bottom: 1px solid var(--header-separate-line);
 }
 
-.header-container {
+.header__container {
   display: flex;
   align-items: center;
   gap: 50px;
 }
 
-.nav {
+.site-nav {
   display: flex;
   align-items: center;
   flex-grow: 1;
   gap: 93px;
 }
 
-.nav-list {
+.site-nav__list {
   display: flex;
   justify-content: space-between;
   gap: 50px;
@@ -179,7 +171,7 @@ body {
   gap: 50px;
 }
 
-.contacts-link {
+.contacts-list__link {
   color: var(--secondary-text-color);
 
   font-weight: 500;
@@ -195,21 +187,21 @@ body {
   transition: color 250ms var(--timing-function);
 }
 
-.contacts-link:hover,
-.contacts-link:focus {
+.contacts-list__link:hover,
+.contacts-list__link:focus {
   color: var(--accent-color);
 }
 
 /* svg mail, tel color  */
-.contacts-logo-icon {
+.contacts-list__logo-icon {
   fill: var(--secondary-text-color);
 
   transition: fill 250ms var(--timing-function);
 }
 
 /* svg mail, tel hover, focus */
-.contacts-link:hover .contacts-logo-icon,
-.contacts-link:focus .contacts-logo-icon {
+.contacts-list__link:hover .contacts-list__logo-icon,
+.contacts-list__link:focus .contacts-list__logo-icon {
   fill: var(--accent-color);
 }
 
@@ -232,7 +224,7 @@ body {
   padding: 200px 0 200px;
 }
 
-.hero-title {
+.hero__title {
   color: var(--primary-white-color);
 
   font-weight: 900;
@@ -278,7 +270,12 @@ body {
 }
 
 /* features title h2 hidden!!! */
-.features-title {
+.features-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.features-section__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -287,19 +284,14 @@ body {
   margin-bottom: 10px;
 }
 
-.features-text {
+.features-section__text {
   color: var(--secondary-text-color);
 
   font-size: 14px;
   line-height: 1.71;
 }
 
-.features-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.futures-icon {
+.features-section__icon {
   background-color: var(--secondary-gray-color);
 
   display: flex;
@@ -311,14 +303,14 @@ body {
   height: 120px;
 }
 
-.features-list {
+.features-section__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
 
-.features-list .features-item {
+.features-section__item {
   max-width: 270px;
 }
 
@@ -334,22 +326,22 @@ body {
   padding-bottom: 94px;
 }
 
-.about-list {
+.about-section__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
 
-.about-image {
+.about-section__image {
   display: block;
 }
 
-.about-list {
+.about-section__list {
   position: relative;
 }
 
-.about-text {
+.about-section__text {
   position: absolute;
   bottom: 0;
 
@@ -371,31 +363,9 @@ body {
 }
 
 /* our team */
-.team {
+.team-section {
   background-color: var(--secondary-gray-color);
-}
-
-.team-item {
-  background-color: var(--primary-white-color);
-}
-
-.team-title {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.18;
-
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.team-text {
-  color: var(--secondary-text-color);
-
-  font-size: 16px;
-  line-height: 1.18;
-
-  text-align: center;
-  margin-bottom: 16px;
+  padding: 94px 0;
 }
 
 .team-list {
@@ -405,11 +375,34 @@ body {
   gap: 30px;
 }
 
-.team-image {
+.team-list__item {
+  background-color: var(--primary-white-color);
+}
+
+.team-list__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.team-list__text {
+  color: var(--secondary-text-color);
+
+  font-size: 16px;
+  line-height: 1.18;
+
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.team-list__image {
   display: block;
 }
 
-.container-cards {
+.team-list__container {
   padding: 30px;
   background-color: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -424,7 +417,7 @@ body {
   gap: 10px;
 }
 
-.net-link {
+.net-list__link {
   width: 44px;
   height: 44px;
   display: flex;
@@ -436,25 +429,29 @@ body {
   transition: background-color 250ms var(--timing-function);
 }
 
-.net-icon {
+.net-list__icon {
   fill: var(--svg-grey-color);
 
   transition: fill 250ms var(--timing-function);
 }
 
 /* change hover, focus colors of icons */
-.net-link:hover,
-.net-link:focus {
+.net-list__link:hover,
+.net-list__link:focus {
   background-color: var(--accent-color);
 }
 
-.net-link:hover .net-icon,
-.net-link:focus .net-icon {
+.net-list__link:hover .net-list__icon,
+.net-list__link:focus .net-list__icon {
   fill: var(--primary-white-color);
 }
 
 /* clients section */
-.clients-link {
+.clients-section {
+  padding: 94px 0;
+}
+
+.clients-list__link {
   display: flex;
   fill: var(--svg-grey-color);
   width: 170px;
@@ -472,16 +469,16 @@ body {
   gap: 30px;
 }
 
-.clients-link:hover {
+.clients-list__link:hover {
   border-color: var(--accent-color);
 }
 
-.clients-logo-icon {
+.clients-list__icon {
   transition: fill 250ms var(--timing-function);
 }
 
-.clients-link:hover .clients-logo-icon,
-.clients-link:focus {
+.clients-list__link:hover .clients-list__icon,
+.clients-list__link:focus {
   fill: var(--accent-color);
 }
 
@@ -519,9 +516,8 @@ body {
   gap: 20px;
 }
 
-.logo-footer {
-  display: block;
-  line-height: 31px;
+.footer__logo {
+  color: var(--primary-white-color);
 }
 
 .address-list {
@@ -645,6 +641,10 @@ body {
 
 /* portfolio html */
 /* buttons */
+.portfolio-section {
+  padding: 94px 0;
+}
+
 .filter-button {
   font-family: inherit;
   font-weight: 500;
