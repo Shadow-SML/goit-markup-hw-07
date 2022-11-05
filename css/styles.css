@@ -92,7 +92,6 @@ body {
   font-size: 26px;
   line-height: 1.2;
   text-decoration: none;
-  padding: 24px 0 24px 0;
 }
 
 .logo__text {
@@ -423,26 +422,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--primary-white-color);
   border-radius: 50%;
-
-  transition: background-color 250ms var(--timing-function);
-}
-
-.net-list__icon {
   fill: var(--svg-grey-color);
 
   transition: fill 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function);
 }
 
 /* change hover, focus colors of icons */
 .net-list__link:hover,
 .net-list__link:focus {
   background-color: var(--accent-color);
-}
-
-.net-list__link:hover .net-list__icon,
-.net-list__link:focus .net-list__icon {
   fill: var(--primary-white-color);
 }
 
@@ -477,7 +467,7 @@ body {
   transition: fill 250ms var(--timing-function);
 }
 
-.clients-list__link:hover .clients-list__icon,
+.clients-list__link:hover,
 .clients-list__link:focus {
   fill: var(--accent-color);
 }
@@ -487,27 +477,6 @@ body {
   background-color: var(--secondary-footer-color);
 
   padding: 60px 0;
-}
-
-.address-link-map {
-  color: var(--primary-white-color);
-
-  font-size: 14px;
-  line-height: 1.7;
-}
-
-.address-link {
-  color: var(--footer-text);
-
-  font-size: 14px;
-  line-height: 1.7;
-
-  transition: color 250ms var(--timing-function);
-}
-
-.address-link:hover,
-.address-link:focus {
-  color: var(--accent-color);
 }
 
 .footer-container {
@@ -520,20 +489,41 @@ body {
   color: var(--primary-white-color);
 }
 
-.address-list {
+.address__list {
   display: flex;
   flex-direction: column;
   gap: 9px;
 }
 
-.address-link-map,
-.address-link {
+.address__link-map {
+  color: var(--primary-white-color);
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.address__link {
+  color: var(--footer-text);
+
+  font-size: 14px;
+  line-height: 1.7;
+
+  transition: color 250ms var(--timing-function);
+}
+
+.address__link:hover,
+.address__link:focus {
+  color: var(--accent-color);
+}
+
+.address__link-map,
+.address__link {
   display: block;
   line-height: 21px;
 }
 
-/* footer icon social links */
-.footer-join-container {
+/*footer-join-container */
+.footer-net {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -556,12 +546,12 @@ body {
   text-transform: uppercase;
 }
 
-.footer-list {
+.footer-net__list {
   display: flex;
   gap: 10px;
 }
 
-.footer-net-link {
+.footer-net__link {
   width: 44px;
   height: 44px;
   display: flex;
@@ -569,40 +559,31 @@ body {
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  fill: var(--primary-white-color);
 
   transition: background-color 250ms var(--timing-function);
 }
 
-.footer-net-icon {
-  fill: var(--primary-white-color);
-}
-
 /* change hover, focus colors of background icons */
-.footer-net-link:hover,
-.footer-net-link:focus {
+.footer-net__link:hover,
+.footer-net__link:focus {
   background-color: var(--accent-color);
 }
 
-/* footer form */
-.footer-form-label {
-  color: var(--primary-white-color);
-
-  font-family: "Roboto";
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
+/* footer */
 .footer-form-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.footer-form-input {
+.footer-form {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.footer-form__input {
   color: var(--primary-white-color);
   background-color: var(--secondary-footer-color);
 
@@ -615,22 +596,16 @@ body {
   cursor: pointer;
 }
 
-.footer-button {
+.footer-form__button {
   padding: 10px 62px 10px 28px;
 }
 
-.footer-form-control {
-  display: flex;
-  flex-direction: row;
-  gap: 12px;
-}
-
-.footer-send-button {
+.footer-form__send-button {
   content: "";
   position: relative;
 }
 
-.footer-button-icon {
+.footer-form__icon {
   fill: var(--primary-white-color);
   position: absolute;
   right: 28px;
@@ -973,9 +948,6 @@ body {
   border: 2px solid var(--title-text-color);
   border-radius: 2px;
 
-  /* background-size: contain;
-  background-origin: border-box; */
-
   transition: background-color 250ms var(--timing-function),
     fill-opacity 250ms var(--timing-function);
 }
@@ -987,8 +959,6 @@ body {
 
   fill: var(--primary-white-color);
   fill-opacity: 1;
-  /* background-size: contain;
-  background-origin: border-box; */
 }
 
 .form-button {
