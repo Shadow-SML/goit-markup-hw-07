@@ -839,12 +839,12 @@ body {
   margin-bottom: 4px;
 }
 
-.form-label__control {
+.form-control {
   position: relative;
   margin-bottom: 10px;
 }
 
-.form-label__input {
+.form-control__input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   width: 100%;
@@ -854,19 +854,19 @@ body {
   cursor: pointer;
 }
 
-.form-label__input:focus {
+.form-control__input:focus {
   border-color: var(--accent-color);
 
   transition: border-color 250ms var(--timing-function);
 }
 
-.form-label__input:focus + .form-label__icon {
+.form-control__input:focus + .form-control__icon {
   fill: var(--accent-color);
 
   transition: fill 250ms var(--timing-function);
 }
 
-.form-label__icon {
+.form-control__icon {
   position: absolute;
   left: 12px;
   top: 50%;
@@ -874,7 +874,7 @@ body {
 }
 
 /* Comment */
-.form-label__textarea {
+.form-textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
 
   display: block;
@@ -888,7 +888,7 @@ body {
   cursor: pointer;
 }
 
-.form-label__textarea:focus {
+.form-textarea:focus {
   border-color: var(--accent-color);
 
   transition: border-color 250ms var(--timing-function);
