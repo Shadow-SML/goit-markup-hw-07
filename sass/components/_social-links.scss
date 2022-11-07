@@ -1,0 +1,25 @@
+.net-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.net-list__link {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    fill: var(--svg-grey-color);
+
+    transition: fill 250ms var(--timing-function);
+    transition: background-color 250ms var(--timing-function);
+}
+
+/* change hover, focus colors of icons */
+.net-list__link:hover,
+.net-list__link:focus {
+    background-color: var(--accent-color);
+    fill: var(--primary-white-color);
+}

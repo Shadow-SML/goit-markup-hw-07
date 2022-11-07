@@ -1,0 +1,34 @@
+.clients-section {
+    padding: 94px 0;
+}
+
+.clients-list__link {
+    display: flex;
+    fill: var(--svg-grey-color);
+    width: 170px;
+    height: 92px;
+    border: solid 1px var(--svg-grey-color);
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+
+    transition: border-color 250ms var(--timing-function);
+}
+
+.clients-list {
+    display: flex;
+    gap: 30px;
+}
+
+.clients-list__link:hover {
+    border-color: var(--accent-color);
+}
+
+.clients-list__icon {
+    transition: fill 250ms var(--timing-function);
+}
+
+.clients-list__link:hover,
+.clients-list__link:focus {
+    fill: var(--accent-color);
+}

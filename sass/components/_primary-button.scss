@@ -1,0 +1,29 @@
+.primary-button {
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+
+    margin: auto;
+    padding: 10px 32px;
+
+    transition: background-color 250ms var(--timing-function),
+        box-shadow 250ms var(--timing-function);
+}
+
+.primary-button:hover,
+.primary-button:focus {
+    background-color: var(--active-button);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
