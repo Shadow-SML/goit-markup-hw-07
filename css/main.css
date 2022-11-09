@@ -410,6 +410,10 @@ body {
   max-width: 270px;
 }
 
+.portfolio-section {
+  padding: 94px 0;
+}
+
 .filter-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -671,7 +675,8 @@ body {
   transition: transform 250ms var(--timing-function);
   transition: transform 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
 }
-.modal__close-button {
+
+.close-button {
   background: var(--primary-white-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   fill: var(--logo-black-color);
@@ -692,54 +697,12 @@ body {
   right: 8px;
   top: 8px;
 }
-.modal__close-button:hover, .modal__close-button:focus {
+.close-button:hover, .close-button:focus {
   fill: var(--accent-color);
   -webkit-transition: fill 250ms var(--timing-function);
   transition: fill 250ms var(--timing-function);
 }
 
-.form-button {
-  padding: 10px 52px;
-}
-
-.primary-button {
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
-  margin: auto;
-  -webkit-transition: background-color 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
-  transition: background-color 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
-  transition: background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
-  transition: background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
-}
-
-.primary-button:hover,
-.primary-button:focus {
-  background-color: var(--active-button);
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-}
-
-.portfolio-section {
-  padding: 94px 0;
-}
-
-/* form field */
 .contact-form__text {
   font-family: "Roboto";
   font-style: normal;
@@ -792,7 +755,6 @@ body {
           transform: translateY(-50%);
 }
 
-/* Comment */
 .form-textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   display: block;
@@ -861,39 +823,39 @@ body {
   letter-spacing: 0.01em;
 }
 
-.site-nav__link {
-  color: var(--title-text-color);
-  position: relative;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  padding: 30px 0;
-  -webkit-transition: color 250ms var(--timing-function);
-  transition: color 250ms var(--timing-function);
+.form-button {
+  padding: 10px 52px;
 }
 
-.site-nav__link:hover,
-.site-nav__link:focus {
-  color: var(--accent-color);
-}
-
-/* leaves an active link */
-.site-nav__link--current {
-  color: var(--accent-color);
-}
-
-/* underscore active link */
-.site-nav__link--current::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: block;
-  width: 100%;
-  height: 4px;
+.primary-button {
+  color: var(--primary-white-color);
   background-color: var(--accent-color);
-  border-radius: 2px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  margin: auto;
+  -webkit-transition: background-color 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
+}
+.primary-button:hover, .primary-button:focus {
+  background-color: var(--active-button);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 .site-nav {
@@ -907,8 +869,37 @@ body {
       -ms-flex-positive: 1;
           flex-grow: 1;
   gap: 93px;
+  /* leaves an active link */
+  /* underscore active link */
 }
-
+.site-nav__link {
+  color: var(--title-text-color);
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  padding: 30px 0;
+  -webkit-transition: color 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
+}
+.site-nav__link:hover, .site-nav__link:focus {
+  color: var(--accent-color);
+}
+.site-nav__link--current {
+  color: var(--accent-color);
+}
+.site-nav__link--current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
 .site-nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -932,7 +923,6 @@ body {
           justify-content: center;
   gap: 10px;
 }
-
 .net-list__link {
   width: 44px;
   height: 44px;
@@ -952,10 +942,7 @@ body {
   -webkit-transition: background-color 250ms var(--timing-function);
   transition: background-color 250ms var(--timing-function);
 }
-
-/* change hover, focus colors of icons */
-.net-list__link:hover,
-.net-list__link:focus {
+.net-list__link:hover, .net-list__link:focus {
   background-color: var(--accent-color);
   fill: var(--primary-white-color);
 }
@@ -976,11 +963,9 @@ body {
           justify-content: center;
   gap: 30px;
 }
-
 .team-list__item {
   background-color: var(--primary-white-color);
 }
-
 .team-list__title {
   font-weight: 500;
   font-size: 16px;
@@ -988,7 +973,6 @@ body {
   margin-bottom: 10px;
   text-align: center;
 }
-
 .team-list__text {
   color: var(--secondary-text-color);
   font-size: 16px;
@@ -996,11 +980,9 @@ body {
   text-align: center;
   margin-bottom: 16px;
 }
-
 .team-list__image {
   display: block;
 }
-
 .team-list__container {
   padding: 30px;
   background-color: var(--primary-white-color);
