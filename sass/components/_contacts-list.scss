@@ -2,38 +2,37 @@
     display: flex;
     flex-wrap: nowrap;
     gap: 50px;
-}
 
-.contacts-list__link {
-    color: var(--secondary-text-color);
-
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 32px 0;
-
-    transition: color 250ms var(--timing-function);
-}
-
-.contacts-list__link:hover,
-.contacts-list__link:focus {
-    color: var(--accent-color);
-}
-
-/* svg mail, tel color  */
-.contacts-list__logo {
-    fill: var(--secondary-text-color);
-
-    transition: fill 250ms var(--timing-function);
-}
-
-/* svg mail, tel hover, focus */
-.contacts-list__link:hover .contacts-list__logo,
-.contacts-list__link:focus .contacts-list__logo {
-    fill: var(--accent-color);
+    &__link {
+            color: var(--secondary-text-color);
+    
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.14;
+            letter-spacing: 0.02em;
+    
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 32px 0;
+    
+            transition: color $transition-dur var(--timing-function);
+        }
+    
+    &__link:hover,
+    &__link:focus {
+            color: var(--accent-color);
+        }
+    
+    
+    &__logo {
+            fill: var(--secondary-text-color);
+    
+            transition: fill $transition-dur var(--timing-function);
+        }
+    
+    &__link:hover .contacts-list__logo,
+    &__link:focus .contacts-list__logo {
+            fill: var(--accent-color);
+        }
 }

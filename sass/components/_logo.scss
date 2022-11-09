@@ -6,8 +6,12 @@
     font-size: 26px;
     line-height: 1.2;
     text-decoration: none;
+
+    &__text {
+            color: var(--logo-black-color);
+        }
 }
 
-.logo__text {
-    color: var(--logo-black-color);
+.footer__logo {
+    color: var(--primary-white-color);
 }

@@ -1,26 +1,25 @@
 .backdrop {
-    background-color: rgba(0, 0, 0, 0.2);
-
     position: fixed;
-
-    z-index: 3;
-    height: 100%;
-    width: 100%;
+    background-color: $backdrop;
     top: 0;
     left: 0;
-
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    transform: scale(1);
     opacity: 1;
-
-    transition: opacity 250ms var(--timing-function),
-        visibility 250ms var(--timing-function);
+    transform-origin: bottom;
+    transition-property: transform, opacity;
+    transition-duration: $transition-dur;
+    transition-timing-function: $cubic-bezier;
 }
 
-.backdrop.is-hidden {
-    opacity: 0;
+.is-hidden {
     visibility: hidden;
+    opacity: 0;
+    transform: scale(1.2);
     pointer-events: none;
-}
-
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(1.1);
+    transition-property: visibility, transform, opacity;
+    transition-duration: $transition-dur;
+    transition-timing-function: $cubic-bezier;
 }
